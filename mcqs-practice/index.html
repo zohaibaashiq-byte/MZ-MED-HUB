@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MZ-MED-HUB | MCQs Practice</title>
+
+  <link rel="stylesheet" href="mcqs.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>MZ-MED-HUB</h1>
+      <p>MBBS MCQs Practice</p>
+    </header>
+
+
+    <!-- SUBJECT SELECTION -->
+    <section id="subject-screen" class="screen">
+
+      <h2>Select Subject</h2>
+
+      <div class="subject-grid">
+
+        <button onclick="selectSubject('physiology')">
+          Physiology
+        </button>
+
+        <button onclick="selectSubject('anatomy')">
+          Anatomy
+        </button>
+
+        <button onclick="selectSubject('biochemistry')">
+          Biochemistry
+        </button>
+
+        <button onclick="selectSubject('pharmacology')">
+          Pharmacology
+        </button>
+
+        <button onclick="selectSubject('pathology')">
+          Pathology
+        </button>
+
+        <button onclick="selectSubject('microbiology')">
+          Microbiology
+        </button>
+
+        <button onclick="selectSubject('medicine')">
+          Medicine
+        </button>
+
+        <button onclick="selectSubject('surgery')">
+          Surgery
+        </button>
+
+        <button onclick="selectSubject('obgyn')">
+          OBGYN
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TOPIC SELECTION -->
+    <section id="topic-screen" class="screen" style="display:none;">
+
+      <button class="back-btn" onclick="goBackToSubjects()">
+        ← Back
+      </button>
+
+      <h2 id="subject-title">Select Topic</h2>
+
+      <div id="topic-list" class="topic-grid"></div>
+
+    </section>
+
+
+    <!-- QUIZ SETTINGS -->
+    <section id="settings-screen" class="screen" style="display:none;">
+
+      <button class="back-btn" onclick="goBackToTopics()">
+        ← Back
+      </button>
+
+      <h2>Quiz Settings</h2>
+
+      <p>Select Number of Questions</p>
+
+      <div class="number-buttons">
+
+        <button onclick="startQuiz(10)">
+          10
+        </button>
+
+        <button onclick="startQuiz(20)">
+          20
+        </button>
+
+        <button onclick="startQuiz(30)">
+          30
+        </button>
+
+        <button onclick="startQuiz(50)">
+          50
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz-screen" class="quiz-card" style="display:none;">
+
+      <div class="quiz-info">
+
+        <span id="question-number">
+          Question 1
+        </span>
+
+        <span id="score">
+          Score: 0
+        </span>
+
+      </div>
+
+
+      <div class="progress-container">
+
+        <div id="progress-bar"></div>
+
+      </div>
+
+
+      <h2 id="question">
+        Question will appear here
+      </h2>
+
+
+      <div id="options" class="options"></div>
+
+
+      <div id="explanation" class="explanation"></div>
+
+
+      <button
+        id="next-btn"
+        class="next-btn"
+        style="display:none;"
+        onclick="nextQuestion()">
+
+        Next Question →
+
+      </button>
+
+    </section>
+
+
+    <!-- RESULT SCREEN -->
+    <section id="result-screen" class="result-card" style="display:none;">
+
+      <h2>🎯 Quiz Complete!</h2>
+
+      <div class="result-score">
+
+        <p id="final-score">
+          Score: 0
+        </p>
+
+        <p id="percentage">
+          0%
+        </p>
+
+      </div>
+
+
+      <div class="result-details">
+
+        <p id="correct-count">
+          Correct: 0
+        </p>
+
+        <p id="wrong-count">
+          Wrong: 0
+        </p>
+
+      </div>
+
+
+      <button
+        class="retake-btn"
+        onclick="retakeQuiz()">
+
+        🔄 Retake Quiz
+
+      </button>
+
+
+      <button
+        class="home-btn"
+        onclick="goHome()">
+
+        🏠 MCQs Home
+
+      </button>
+
+    </section>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="mcqs.js"></script>
+
+</body>
+</html>
